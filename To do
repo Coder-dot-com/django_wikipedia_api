@@ -1,0 +1,6 @@
+-In bs4 function return the title of the result and the first few lines (max 20 terms) as a json
+-if none found return this also
+C
+
+onstruct the json view based on response from bs4 func
+
