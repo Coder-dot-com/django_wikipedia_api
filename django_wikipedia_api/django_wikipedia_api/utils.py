@@ -9,11 +9,15 @@ def search_wikipedia(search_term):
     soup = BeautifulSoup(site, 'html.parser')
 
     results = soup.select(selector="#bodyContent .mw-search-result .searchresult")
-
-    if results:
-        print(results[0])
-
     if not results:
-        print("No results found")
+        return ["No results found"]
 
-search_wikipedia("fdsd")
+
+    else:
+        list_of_results = [result.getText() for result in results]
+        print(list_of_results)
+        print(list_of_results[0])
+        print(list_of_results[1])
+        return list_of_results
+
+
